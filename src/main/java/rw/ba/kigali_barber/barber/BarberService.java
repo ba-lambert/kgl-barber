@@ -5,15 +5,18 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import lombok.RequiredArgsConstructor;
 import rw.ba.kigali_barber.barber.dto.BarberRequestDto;
 import rw.ba.kigali_barber.barber.exceptions.BarberExistsException;
 
 @Service 
-@RequiredArgsConstructor 
 public class BarberService {
     private final BarberRepository barberRepository;
     private final BarberMapper barberMapper;
+
+    public BarberService(BarberRepository barberRepository, BarberMapper barberMapper){
+        this.barberMapper = barberMapper;
+        this.barberRepository = barberRepository;
+    }
 
     @Transactional 
     public String create(BarberRequestDto dto){

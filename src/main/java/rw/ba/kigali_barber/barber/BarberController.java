@@ -16,9 +16,11 @@ import rw.ba.kigali_barber.common.response.ApiResponse;
 @RestController
 @Tag(name = "Barbers")
 @RequestMapping("/api/barbers")
-@RequiredArgsConstructor
 public class BarberController {
     private final BarberService barberService;
+    public BarberController(BarberService barberService){
+        this.barberService = barberService;
+    }
 
     @PostMapping
     public ApiResponse<String> create(@RequestBody BarberRequestDto request) {
