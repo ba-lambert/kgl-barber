@@ -29,3 +29,5 @@ databaseChangeLog:
       file: db/changelog/changes/013-alter-table-hairstyles-to-hairstyle.sql
   - include:
       file: db/changelog/changes/014-alter-table-hairstyles-add-duration.sql
+  - include:
+      file: db/changelog/changes/015-barber-hairstyle.sql

@@ -1,4 +1,4 @@
-package rw.ba.kigali_barber.barber;
+package rw.ba.kigali_barber.barber.controller;
 
 import java.util.List;
 
@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import rw.ba.kigali_barber.barber.BarberEntity;
 import rw.ba.kigali_barber.barber.dto.BarberRequestDto;
+import rw.ba.kigali_barber.barber.service.BarberService;
 import rw.ba.kigali_barber.common.response.ApiResponse;
 
 @RestController
