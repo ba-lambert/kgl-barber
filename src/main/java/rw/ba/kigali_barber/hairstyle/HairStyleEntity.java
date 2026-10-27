@@ -7,13 +7,15 @@ import lombok.Getter;
 import lombok.Setter;
 import rw.ba.kigali_barber.common.BaseEntity;
 
-@Entity 
-@Table (name = "hair_style")
-@Getter 
-@Setter 
+@Entity
+@Table(name = "hair_style")
+@Getter
+@Setter
 public class HairStyleEntity extends BaseEntity {
-    @Column (unique = true,nullable = false)
+    @Column(unique = true, nullable = false)
     private String name;
-    @Column (name = "price",nullable = false)
+    @Column(name = "price", nullable = false)
     private int price;
+    @Column(name = "duration", nullable = false)
+    private int duration;
 }
